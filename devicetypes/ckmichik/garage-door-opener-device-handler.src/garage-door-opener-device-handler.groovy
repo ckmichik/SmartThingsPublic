@@ -26,6 +26,9 @@ metadata {
 
 	tiles {
 		// TODO: define your main and details tiles here
+		main(["switch"])
+		details(["switch"])
+		
 	}
 }
 
