@@ -40,7 +40,7 @@ metadata {
 		
 		main(["switch"])
 		details(["switch","refresh"])
-		
+		 
 	}
 }
 
