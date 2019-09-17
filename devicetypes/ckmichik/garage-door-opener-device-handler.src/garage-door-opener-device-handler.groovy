@@ -26,8 +26,20 @@ metadata {
 
 	tiles {
 		// TODO: define your main and details tiles here
+		tiles (scale: 2) {
+			// TODO: define your main and details tiles here
+			standardTile("indicator", "device.indicatorStatus", width: 2, height: 2, inactiveLabel: false, decoration: "flat") {
+				state "when off", action:"indicator.indicatorWhenOn", icon:"st.indicators.lit-when-off"
+				state "when on", action:"indicator.indicatorNever", icon:"st.indicators.lit-when-on"
+				state "never", action:"indicator.indicatorWhenOff", icon:"st.indicators.never-lit"
+			}
+			
+			standardTile("refresh", "device.switch", width: 2, height: 2, inactiveLabel: false, decoration: "flat") {
+				state "default", label:'', action:"refresh.refresh", icon:"st.secondary.refresh"
+			}
+		
 		main(["switch"])
-		details(["switch"])
+		details(["switch","refresh"])
 		
 	}
 }
